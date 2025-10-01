@@ -4,8 +4,7 @@
   "info": {
     "singularName": "action-mode",
     "pluralName": "action-modes",
-    "displayName": "ActionMode",
-    "description": ""
+    "displayName": "ActionMode"
   },
   "options": {
     "draftAndPublish": false
@@ -14,8 +13,8 @@
   "attributes": {
     "description": {
       "type": "string",
-      "unique": true,
-      "required": true
+      "required": true,
+      "unique": true
     }
   }
 }

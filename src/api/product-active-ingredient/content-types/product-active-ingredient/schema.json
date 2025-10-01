@@ -24,8 +24,7 @@
     },
     "concentration": {
       "type": "string",
-      "required": true,
-      "unique": false
+      "required": true
     }
   }
 }

@@ -4,8 +4,7 @@
   "info": {
     "singularName": "prague",
     "pluralName": "pragues",
-    "displayName": "Prague",
-    "description": ""
+    "displayName": "Prague"
   },
   "options": {
     "draftAndPublish": false
@@ -14,8 +13,8 @@
   "attributes": {
     "scientific_name": {
       "type": "string",
-      "unique": true,
-      "required": true
+      "required": true,
+      "unique": true
     },
     "prague_common_names": {
       "type": "relation",

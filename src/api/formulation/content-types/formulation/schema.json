@@ -4,8 +4,7 @@
   "info": {
     "singularName": "formulation",
     "pluralName": "formulations",
-    "displayName": "Formulation",
-    "description": ""
+    "displayName": "Formulation"
   },
   "options": {
     "draftAndPublish": false
@@ -14,8 +13,8 @@
   "attributes": {
     "description": {
       "type": "string",
-      "unique": true,
-      "required": true
+      "required": true,
+      "unique": true
     }
   }
 }

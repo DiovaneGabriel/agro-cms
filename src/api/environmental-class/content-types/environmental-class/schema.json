@@ -4,8 +4,7 @@
   "info": {
     "singularName": "environmental-class",
     "pluralName": "environmental-classes",
-    "displayName": "EnvironmentalClass",
-    "description": ""
+    "displayName": "EnvironmentalClass"
   },
   "options": {
     "draftAndPublish": false
@@ -14,8 +13,8 @@
   "attributes": {
     "name": {
       "type": "string",
-      "unique": true,
-      "required": true
+      "required": true,
+      "unique": true
     }
   }
 }

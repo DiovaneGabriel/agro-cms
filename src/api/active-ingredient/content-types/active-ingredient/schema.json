@@ -4,8 +4,7 @@
   "info": {
     "singularName": "active-ingredient",
     "pluralName": "active-ingredients",
-    "displayName": "ActiveIngredient",
-    "description": ""
+    "displayName": "ActiveIngredient"
   },
   "options": {
     "draftAndPublish": false
@@ -14,8 +13,8 @@
   "attributes": {
     "name": {
       "type": "string",
-      "unique": true,
-      "required": true
+      "required": true,
+      "unique": true
     },
     "chemical_group": {
       "type": "relation",

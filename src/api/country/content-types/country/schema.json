@@ -4,8 +4,7 @@
   "info": {
     "singularName": "country",
     "pluralName": "countries",
-    "displayName": "Country",
-    "description": ""
+    "displayName": "Country"
   },
   "options": {
     "draftAndPublish": false

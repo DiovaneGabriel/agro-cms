@@ -4,8 +4,7 @@
   "info": {
     "singularName": "company",
     "pluralName": "companies",
-    "displayName": "Company",
-    "description": ""
+    "displayName": "Company"
   },
   "options": {
     "draftAndPublish": false
@@ -15,7 +14,7 @@
     "name": {
       "type": "string",
       "required": true,
-      "unique": false
+      "unique": true
     },
     "country": {
       "type": "relation",

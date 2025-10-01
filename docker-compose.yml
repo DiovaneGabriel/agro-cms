@@ -18,7 +18,7 @@ services:
     image: mariadb:11.3.2
     container_name: "agro-mariadb"
     volumes:
-      - agro-data:/var/lib/mysql
+      - agro-data-v5:/var/lib/mysql
       - .docker/mariadb/scripts:/docker-entrypoint-initdb.d
       - .docker/mariadb/config/50-server.cnf:/etc/mysql/mariadb.conf.d/50-server.cnf
     ports:
@@ -36,4 +36,4 @@ networks:
     external: true
 
 volumes:
-  agro-data:
+  agro-data-v5:

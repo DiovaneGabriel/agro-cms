@@ -4,23 +4,22 @@
   "info": {
     "singularName": "prague-common-name",
     "pluralName": "prague-common-names",
-    "displayName": "PragueCommonName",
-    "description": ""
+    "displayName": "PragueCommonName"
   },
   "options": {
     "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
-    "name": {
-      "type": "string",
-      "required": true
-    },
     "prague": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::prague.prague",
       "inversedBy": "prague_common_names"
+    },
+    "name": {
+      "type": "string",
+      "required": true
     }
   }
 }

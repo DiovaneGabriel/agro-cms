@@ -4,8 +4,7 @@
   "info": {
     "singularName": "chemical-group",
     "pluralName": "chemical-groups",
-    "displayName": "ChemicalGroup",
-    "description": ""
+    "displayName": "ChemicalGroup"
   },
   "options": {
     "draftAndPublish": false

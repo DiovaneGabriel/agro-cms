@@ -15,13 +15,12 @@ update:
 
 install:
 	docker build -f .docker/node/Dockerfile -t ${NODE_IMAGE} . && \
-	docker run -it -v ./app:/app ${NODE_IMAGE} /bin/sh -c "npx create-strapi-app@4.25.24 . && npm i" && \
+	docker run -it -v ./app:/app ${NODE_IMAGE} /bin/sh -c "npx create-strapi-app@latest . && npm i" && \
 	sudo chmod -R 777 . && \
 	mv ./app/* . && \
 	mv ./app/.editorconfig . && \
 	mv ./app/.env . && \
 	mv ./app/.env.example . && \
 	mv ./app/.gitignore . && \
-	rm -rf ./app && \
 	docker container prune -f && \
 	docker compose up -d

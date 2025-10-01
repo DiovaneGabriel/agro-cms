@@ -4,8 +4,7 @@
   "info": {
     "singularName": "culture",
     "pluralName": "cultures",
-    "displayName": "Culture",
-    "description": ""
+    "displayName": "Culture"
   },
   "options": {
     "draftAndPublish": false

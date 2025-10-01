@@ -4,8 +4,7 @@
   "info": {
     "singularName": "product-brand",
     "pluralName": "product-brands",
-    "displayName": "ProductBrand",
-    "description": ""
+    "displayName": "ProductBrand"
   },
   "options": {
     "draftAndPublish": false
@@ -20,8 +19,7 @@
     },
     "name": {
       "type": "string",
-      "required": true,
-      "unique": true
+      "required": true
     }
   }
 }

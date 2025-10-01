@@ -4,8 +4,7 @@
   "info": {
     "singularName": "registration-holder",
     "pluralName": "registration-holders",
-    "displayName": "RegistrationHolder",
-    "description": ""
+    "displayName": "RegistrationHolder"
   },
   "options": {
     "draftAndPublish": false

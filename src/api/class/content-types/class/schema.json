@@ -4,8 +4,7 @@
   "info": {
     "singularName": "class",
     "pluralName": "classes",
-    "displayName": "Class",
-    "description": ""
+    "displayName": "Class"
   },
   "options": {
     "draftAndPublish": false
