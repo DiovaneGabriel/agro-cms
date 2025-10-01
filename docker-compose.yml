@@ -19,7 +19,8 @@ services:
     container_name: "agro-mariadb"
     volumes:
       - agro-data:/var/lib/mysql
-      - .docker/mariadb/scripts/create-database.sql:/docker-entrypoint-initdb.d/create-database.sql
+      - .docker/mariadb/scripts:/docker-entrypoint-initdb.d
+      - .docker/mariadb/config/50-server.cnf:/etc/mysql/mariadb.conf.d/50-server.cnf
     ports:
       - 3306:3306
     environment:

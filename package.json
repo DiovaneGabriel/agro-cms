@@ -10,12 +10,14 @@
     "strapi": "strapi",
     "deploy": "strapi deploy"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@types/minimatch": "^5.1.2"
+  },
   "dependencies": {
-    "@strapi/strapi": "4.25.24",
-    "@strapi/plugin-users-permissions": "4.25.24",
-    "@strapi/plugin-i18n": "4.25.24",
     "@strapi/plugin-cloud": "4.25.24",
+    "@strapi/plugin-i18n": "4.25.24",
+    "@strapi/plugin-users-permissions": "4.25.24",
+    "@strapi/strapi": "4.25.24",
     "mysql": "2.18.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
