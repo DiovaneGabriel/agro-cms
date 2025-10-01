@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "prague_common_names",
+  "info": {
+    "singularName": "prague-common-name",
+    "pluralName": "prague-common-names",
+    "displayName": "PragueCommonName",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "prague": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::prague.prague",
+      "inversedBy": "prague_common_names"
+    }
+  }
+}

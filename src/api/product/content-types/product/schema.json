@@ -1,0 +1,104 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "reference_id": {
+      "type": "integer",
+      "required": true,
+      "unique": true
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "is_organic": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "register_number": {
+      "type": "integer",
+      "required": true,
+      "unique": true
+    },
+    "formulation": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::formulation.formulation"
+    },
+    "registration_holder": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::registration-holder.registration-holder"
+    },
+    "toxicological_class": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::toxicological-class.toxicological-class"
+    },
+    "environmental_class": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::environmental-class.environmental-class"
+    },
+    "hrac": {
+      "type": "string"
+    },
+    "wssa": {
+      "type": "string"
+    },
+    "product_brands": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product-brand.product-brand",
+      "mappedBy": "product"
+    },
+    "product_active_ingredients": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product-active-ingredient.product-active-ingredient",
+      "mappedBy": "product"
+    },
+    "product_classes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product-class.product-class",
+      "mappedBy": "product"
+    },
+    "product_action_modes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product-action-mode.product-action-mode",
+      "mappedBy": "product"
+    },
+    "product_cultures": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product-culture.product-culture",
+      "mappedBy": "product"
+    },
+    "product_pragues": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product-prague.product-prague",
+      "mappedBy": "product"
+    },
+    "product_companies": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product-company.product-company",
+      "mappedBy": "product"
+    }
+  }
+}

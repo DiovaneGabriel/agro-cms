@@ -362,6 +362,852 @@ export interface AdminUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiActionMechanismActionMechanism
+  extends Schema.CollectionType {
+  collectionName: 'action_mechanisms';
+  info: {
+    description: '';
+    displayName: 'ActionMechanism';
+    pluralName: 'action-mechanisms';
+    singularName: 'action-mechanism';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::action-mechanism.action-mechanism',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    name: Attribute.String & Attribute.Required & Attribute.Unique;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::action-mechanism.action-mechanism',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiActionModeActionMode extends Schema.CollectionType {
+  collectionName: 'action_modes';
+  info: {
+    description: '';
+    displayName: 'ActionMode';
+    pluralName: 'action-modes';
+    singularName: 'action-mode';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::action-mode.action-mode',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    description: Attribute.String & Attribute.Required & Attribute.Unique;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::action-mode.action-mode',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiActiveIngredientActiveIngredient
+  extends Schema.CollectionType {
+  collectionName: 'active_ingredients';
+  info: {
+    description: '';
+    displayName: 'ActiveIngredient';
+    pluralName: 'active-ingredients';
+    singularName: 'active-ingredient';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    chemical_group: Attribute.Relation<
+      'api::active-ingredient.active-ingredient',
+      'oneToOne',
+      'api::chemical-group.chemical-group'
+    >;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::active-ingredient.active-ingredient',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    name: Attribute.String & Attribute.Required & Attribute.Unique;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::active-ingredient.active-ingredient',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiChemicalGroupChemicalGroup extends Schema.CollectionType {
+  collectionName: 'chemical_groups';
+  info: {
+    description: '';
+    displayName: 'ChemicalGroup';
+    pluralName: 'chemical-groups';
+    singularName: 'chemical-group';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::chemical-group.chemical-group',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    name: Attribute.String & Attribute.Required & Attribute.Unique;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::chemical-group.chemical-group',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiClassClass extends Schema.CollectionType {
+  collectionName: 'classes';
+  info: {
+    description: '';
+    displayName: 'Class';
+    pluralName: 'classes';
+    singularName: 'class';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::class.class',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    name: Attribute.String & Attribute.Required & Attribute.Unique;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::class.class',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCompanyTypeCompanyType extends Schema.CollectionType {
+  collectionName: 'company_types';
+  info: {
+    description: '';
+    displayName: 'CompanyType';
+    pluralName: 'company-types';
+    singularName: 'company-type';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::company-type.company-type',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    name: Attribute.String & Attribute.Required & Attribute.Unique;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::company-type.company-type',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCompanyCompany extends Schema.CollectionType {
+  collectionName: 'companies';
+  info: {
+    description: '';
+    displayName: 'Company';
+    pluralName: 'companies';
+    singularName: 'company';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    country: Attribute.Relation<
+      'api::company.company',
+      'oneToOne',
+      'api::country.country'
+    >;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::company.company',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    name: Attribute.String & Attribute.Required;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::company.company',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCountryCountry extends Schema.CollectionType {
+  collectionName: 'countries';
+  info: {
+    description: '';
+    displayName: 'Country';
+    pluralName: 'countries';
+    singularName: 'country';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::country.country',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    name: Attribute.String & Attribute.Required & Attribute.Unique;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::country.country',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCultureCulture extends Schema.CollectionType {
+  collectionName: 'cultures';
+  info: {
+    description: '';
+    displayName: 'Culture';
+    pluralName: 'cultures';
+    singularName: 'culture';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::culture.culture',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    name: Attribute.String & Attribute.Required & Attribute.Unique;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::culture.culture',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiEnvironmentalClassEnvironmentalClass
+  extends Schema.CollectionType {
+  collectionName: 'environmental_classes';
+  info: {
+    description: '';
+    displayName: 'EnvironmentalClass';
+    pluralName: 'environmental-classes';
+    singularName: 'environmental-class';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::environmental-class.environmental-class',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    name: Attribute.String & Attribute.Required & Attribute.Unique;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::environmental-class.environmental-class',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiFormulationFormulation extends Schema.CollectionType {
+  collectionName: 'formulations';
+  info: {
+    description: '';
+    displayName: 'Formulation';
+    pluralName: 'formulations';
+    singularName: 'formulation';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::formulation.formulation',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    description: Attribute.String & Attribute.Required & Attribute.Unique;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::formulation.formulation',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiPragueCommonNamePragueCommonName
+  extends Schema.CollectionType {
+  collectionName: 'prague_common_names';
+  info: {
+    description: '';
+    displayName: 'PragueCommonName';
+    pluralName: 'prague-common-names';
+    singularName: 'prague-common-name';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::prague-common-name.prague-common-name',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    name: Attribute.String & Attribute.Required;
+    prague: Attribute.Relation<
+      'api::prague-common-name.prague-common-name',
+      'manyToOne',
+      'api::prague.prague'
+    >;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::prague-common-name.prague-common-name',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiPraguePrague extends Schema.CollectionType {
+  collectionName: 'pragues';
+  info: {
+    description: '';
+    displayName: 'Prague';
+    pluralName: 'pragues';
+    singularName: 'prague';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::prague.prague',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    prague_common_names: Attribute.Relation<
+      'api::prague.prague',
+      'oneToMany',
+      'api::prague-common-name.prague-common-name'
+    >;
+    scientific_name: Attribute.String & Attribute.Required & Attribute.Unique;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::prague.prague',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiProductActionModeProductActionMode
+  extends Schema.CollectionType {
+  collectionName: 'product_action_modes';
+  info: {
+    displayName: 'ProductActionMode';
+    pluralName: 'product-action-modes';
+    singularName: 'product-action-mode';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    action_mode: Attribute.Relation<
+      'api::product-action-mode.product-action-mode',
+      'oneToOne',
+      'api::action-mode.action-mode'
+    >;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::product-action-mode.product-action-mode',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    product: Attribute.Relation<
+      'api::product-action-mode.product-action-mode',
+      'manyToOne',
+      'api::product.product'
+    >;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::product-action-mode.product-action-mode',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiProductActiveIngredientProductActiveIngredient
+  extends Schema.CollectionType {
+  collectionName: 'product_active_ingredients';
+  info: {
+    displayName: 'ProductActiveIngredient';
+    pluralName: 'product-active-ingredients';
+    singularName: 'product-active-ingredient';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    active_ingredient: Attribute.Relation<
+      'api::product-active-ingredient.product-active-ingredient',
+      'oneToOne',
+      'api::active-ingredient.active-ingredient'
+    >;
+    concentration: Attribute.String & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::product-active-ingredient.product-active-ingredient',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    product: Attribute.Relation<
+      'api::product-active-ingredient.product-active-ingredient',
+      'manyToOne',
+      'api::product.product'
+    >;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::product-active-ingredient.product-active-ingredient',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiProductBrandProductBrand extends Schema.CollectionType {
+  collectionName: 'product_brands';
+  info: {
+    description: '';
+    displayName: 'ProductBrand';
+    pluralName: 'product-brands';
+    singularName: 'product-brand';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::product-brand.product-brand',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    name: Attribute.String & Attribute.Required & Attribute.Unique;
+    product: Attribute.Relation<
+      'api::product-brand.product-brand',
+      'manyToOne',
+      'api::product.product'
+    >;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::product-brand.product-brand',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiProductClassProductClass extends Schema.CollectionType {
+  collectionName: 'product_classes';
+  info: {
+    displayName: 'ProductClass';
+    pluralName: 'product-classes';
+    singularName: 'product-class';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    action_mechanism: Attribute.Relation<
+      'api::product-class.product-class',
+      'oneToOne',
+      'api::action-mechanism.action-mechanism'
+    >;
+    class: Attribute.Relation<
+      'api::product-class.product-class',
+      'oneToOne',
+      'api::class.class'
+    >;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::product-class.product-class',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    product: Attribute.Relation<
+      'api::product-class.product-class',
+      'manyToOne',
+      'api::product.product'
+    >;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::product-class.product-class',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiProductCompanyProductCompany extends Schema.CollectionType {
+  collectionName: 'product_companies';
+  info: {
+    displayName: 'ProductCompany';
+    pluralName: 'product-companies';
+    singularName: 'product-company';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    company: Attribute.Relation<
+      'api::product-company.product-company',
+      'oneToOne',
+      'api::company.company'
+    >;
+    company_type: Attribute.Relation<
+      'api::product-company.product-company',
+      'oneToOne',
+      'api::company-type.company-type'
+    >;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::product-company.product-company',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    product: Attribute.Relation<
+      'api::product-company.product-company',
+      'manyToOne',
+      'api::product.product'
+    >;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::product-company.product-company',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiProductCultureProductCulture extends Schema.CollectionType {
+  collectionName: 'product_cultures';
+  info: {
+    displayName: 'ProductCulture';
+    pluralName: 'product-cultures';
+    singularName: 'product-culture';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::product-culture.product-culture',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    culture: Attribute.Relation<
+      'api::product-culture.product-culture',
+      'oneToOne',
+      'api::culture.culture'
+    >;
+    product: Attribute.Relation<
+      'api::product-culture.product-culture',
+      'manyToOne',
+      'api::product.product'
+    >;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::product-culture.product-culture',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiProductPragueProductPrague extends Schema.CollectionType {
+  collectionName: 'product_pragues';
+  info: {
+    displayName: 'ProductPrague';
+    pluralName: 'product-pragues';
+    singularName: 'product-prague';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::product-prague.product-prague',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    prague: Attribute.Relation<
+      'api::product-prague.product-prague',
+      'oneToOne',
+      'api::prague.prague'
+    >;
+    product: Attribute.Relation<
+      'api::product-prague.product-prague',
+      'manyToOne',
+      'api::product.product'
+    >;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::product-prague.product-prague',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiProductProduct extends Schema.CollectionType {
+  collectionName: 'products';
+  info: {
+    description: '';
+    displayName: 'Product';
+    pluralName: 'products';
+    singularName: 'product';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::product.product',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    environmental_class: Attribute.Relation<
+      'api::product.product',
+      'oneToOne',
+      'api::environmental-class.environmental-class'
+    >;
+    formulation: Attribute.Relation<
+      'api::product.product',
+      'oneToOne',
+      'api::formulation.formulation'
+    >;
+    hrac: Attribute.String;
+    is_active: Attribute.Boolean &
+      Attribute.Required &
+      Attribute.DefaultTo<true>;
+    is_organic: Attribute.Boolean &
+      Attribute.Required &
+      Attribute.DefaultTo<false>;
+    product_action_modes: Attribute.Relation<
+      'api::product.product',
+      'oneToMany',
+      'api::product-action-mode.product-action-mode'
+    >;
+    product_active_ingredients: Attribute.Relation<
+      'api::product.product',
+      'oneToMany',
+      'api::product-active-ingredient.product-active-ingredient'
+    >;
+    product_brands: Attribute.Relation<
+      'api::product.product',
+      'oneToMany',
+      'api::product-brand.product-brand'
+    >;
+    product_classes: Attribute.Relation<
+      'api::product.product',
+      'oneToMany',
+      'api::product-class.product-class'
+    >;
+    product_companies: Attribute.Relation<
+      'api::product.product',
+      'oneToMany',
+      'api::product-company.product-company'
+    >;
+    product_cultures: Attribute.Relation<
+      'api::product.product',
+      'oneToMany',
+      'api::product-culture.product-culture'
+    >;
+    product_pragues: Attribute.Relation<
+      'api::product.product',
+      'oneToMany',
+      'api::product-prague.product-prague'
+    >;
+    reference_id: Attribute.Integer & Attribute.Required & Attribute.Unique;
+    register_number: Attribute.Integer & Attribute.Required & Attribute.Unique;
+    registration_holder: Attribute.Relation<
+      'api::product.product',
+      'oneToOne',
+      'api::registration-holder.registration-holder'
+    >;
+    toxicological_class: Attribute.Relation<
+      'api::product.product',
+      'oneToOne',
+      'api::toxicological-class.toxicological-class'
+    >;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::product.product',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    wssa: Attribute.String;
+  };
+}
+
+export interface ApiRegistrationHolderRegistrationHolder
+  extends Schema.CollectionType {
+  collectionName: 'registration_holders';
+  info: {
+    description: '';
+    displayName: 'RegistrationHolder';
+    pluralName: 'registration-holders';
+    singularName: 'registration-holder';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::registration-holder.registration-holder',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    name: Attribute.String & Attribute.Required & Attribute.Unique;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::registration-holder.registration-holder',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiToxicologicalClassToxicologicalClass
+  extends Schema.CollectionType {
+  collectionName: 'toxicological_classes';
+  info: {
+    description: '';
+    displayName: 'ToxicologicalClass';
+    pluralName: 'toxicological-classes';
+    singularName: 'toxicological-class';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::toxicological-class.toxicological-class',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    name: Attribute.String & Attribute.Required & Attribute.Unique;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::toxicological-class.toxicological-class',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease extends Schema.CollectionType {
   collectionName: 'strapi_releases';
   info: {
@@ -798,6 +1644,29 @@ declare module '@strapi/types' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::action-mechanism.action-mechanism': ApiActionMechanismActionMechanism;
+      'api::action-mode.action-mode': ApiActionModeActionMode;
+      'api::active-ingredient.active-ingredient': ApiActiveIngredientActiveIngredient;
+      'api::chemical-group.chemical-group': ApiChemicalGroupChemicalGroup;
+      'api::class.class': ApiClassClass;
+      'api::company-type.company-type': ApiCompanyTypeCompanyType;
+      'api::company.company': ApiCompanyCompany;
+      'api::country.country': ApiCountryCountry;
+      'api::culture.culture': ApiCultureCulture;
+      'api::environmental-class.environmental-class': ApiEnvironmentalClassEnvironmentalClass;
+      'api::formulation.formulation': ApiFormulationFormulation;
+      'api::prague-common-name.prague-common-name': ApiPragueCommonNamePragueCommonName;
+      'api::prague.prague': ApiPraguePrague;
+      'api::product-action-mode.product-action-mode': ApiProductActionModeProductActionMode;
+      'api::product-active-ingredient.product-active-ingredient': ApiProductActiveIngredientProductActiveIngredient;
+      'api::product-brand.product-brand': ApiProductBrandProductBrand;
+      'api::product-class.product-class': ApiProductClassProductClass;
+      'api::product-company.product-company': ApiProductCompanyProductCompany;
+      'api::product-culture.product-culture': ApiProductCultureProductCulture;
+      'api::product-prague.product-prague': ApiProductPragueProductPrague;
+      'api::product.product': ApiProductProduct;
+      'api::registration-holder.registration-holder': ApiRegistrationHolderRegistrationHolder;
+      'api::toxicological-class.toxicological-class': ApiToxicologicalClassToxicologicalClass;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

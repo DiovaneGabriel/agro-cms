@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "company_types",
+  "info": {
+    "singularName": "company-type",
+    "pluralName": "company-types",
+    "displayName": "CompanyType",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    }
+  }
+}

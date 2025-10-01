@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "active_ingredients",
+  "info": {
+    "singularName": "active-ingredient",
+    "pluralName": "active-ingredients",
+    "displayName": "ActiveIngredient",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "chemical_group": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::chemical-group.chemical-group"
+    }
+  }
+}

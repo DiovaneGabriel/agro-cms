@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "toxicological_classes",
+  "info": {
+    "singularName": "toxicological-class",
+    "pluralName": "toxicological-classes",
+    "displayName": "ToxicologicalClass",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    }
+  }
+}

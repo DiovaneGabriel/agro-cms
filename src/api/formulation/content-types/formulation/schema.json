@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "formulations",
+  "info": {
+    "singularName": "formulation",
+    "pluralName": "formulations",
+    "displayName": "Formulation",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    }
+  }
+}

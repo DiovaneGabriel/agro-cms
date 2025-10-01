@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cultures",
+  "info": {
+    "singularName": "culture",
+    "pluralName": "cultures",
+    "displayName": "Culture",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}

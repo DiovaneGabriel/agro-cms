@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "action_modes",
+  "info": {
+    "singularName": "action-mode",
+    "pluralName": "action-modes",
+    "displayName": "ActionMode",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    }
+  }
+}

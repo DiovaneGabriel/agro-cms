@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_pragues",
+  "info": {
+    "singularName": "product-prague",
+    "pluralName": "product-pragues",
+    "displayName": "ProductPrague"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "product": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::product.product",
+      "inversedBy": "product_pragues"
+    },
+    "prague": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::prague.prague"
+    }
+  }
+}

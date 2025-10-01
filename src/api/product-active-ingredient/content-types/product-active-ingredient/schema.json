@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_active_ingredients",
+  "info": {
+    "singularName": "product-active-ingredient",
+    "pluralName": "product-active-ingredients",
+    "displayName": "ProductActiveIngredient"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "product": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::product.product",
+      "inversedBy": "product_active_ingredients"
+    },
+    "active_ingredient": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::active-ingredient.active-ingredient"
+    },
+    "concentration": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    }
+  }
+}

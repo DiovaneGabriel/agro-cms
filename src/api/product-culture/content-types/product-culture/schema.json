@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_cultures",
+  "info": {
+    "singularName": "product-culture",
+    "pluralName": "product-cultures",
+    "displayName": "ProductCulture"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "product": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::product.product",
+      "inversedBy": "product_cultures"
+    },
+    "culture": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::culture.culture"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pragues",
+  "info": {
+    "singularName": "prague",
+    "pluralName": "pragues",
+    "displayName": "Prague",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "scientific_name": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "prague_common_names": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::prague-common-name.prague-common-name",
+      "mappedBy": "prague"
+    }
+  }
+}

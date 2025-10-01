@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_action_modes",
+  "info": {
+    "singularName": "product-action-mode",
+    "pluralName": "product-action-modes",
+    "displayName": "ProductActionMode"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "product": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::product.product",
+      "inversedBy": "product_action_modes"
+    },
+    "action_mode": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::action-mode.action-mode"
+    }
+  }
+}

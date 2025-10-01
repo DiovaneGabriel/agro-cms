@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_companies",
+  "info": {
+    "singularName": "product-company",
+    "pluralName": "product-companies",
+    "displayName": "ProductCompany"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "product": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::product.product",
+      "inversedBy": "product_companies"
+    },
+    "company": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::company.company"
+    },
+    "company_type": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::company-type.company-type"
+    }
+  }
+}

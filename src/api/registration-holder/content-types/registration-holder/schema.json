@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "registration_holders",
+  "info": {
+    "singularName": "registration-holder",
+    "pluralName": "registration-holders",
+    "displayName": "RegistrationHolder",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}
